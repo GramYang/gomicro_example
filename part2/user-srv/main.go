@@ -7,11 +7,11 @@ import (
 	"github.com/micro/go-micro/registry"
 	"github.com/micro/go-micro/registry/consul"
 	"github.com/micro/go-micro/util/log"
-	s "gomicro_example/part1/proto/user"
-	"gomicro_example/part1/user-srv/basic"
-	"gomicro_example/part1/user-srv/basic/config"
-	"gomicro_example/part1/user-srv/handler"
-	"gomicro_example/part1/user-srv/model"
+	"gomicro_example/part2/basic"
+	"gomicro_example/part2/basic/config"
+	s "gomicro_example/part2/proto/user"
+	"gomicro_example/part2/user-srv/handler"
+	"gomicro_example/part2/user-srv/model"
 	"time"
 )
 

@@ -2,7 +2,7 @@ package user
 
 import (
 	"fmt"
-	proto "gomicro_example/part1/proto/user"
+	proto "gomicro_example/part2/proto/user"
 	"sync"
 )
 
