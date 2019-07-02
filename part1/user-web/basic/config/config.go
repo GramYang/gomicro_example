@@ -34,7 +34,7 @@ func Init() {
 	// 先加载基础配置
 	appPath, _ := filepath.Abs(filepath.Dir(filepath.Join("./", string(filepath.Separator))))
 
-	pt := filepath.Join(appPath, "conf")
+	pt := filepath.Join(appPath, "part2\\user-web\\conf")
 	_ = os.Chdir(appPath)
 
 	// 找到application.yml文件
