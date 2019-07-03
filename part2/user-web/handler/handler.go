@@ -6,7 +6,7 @@ import (
 	"github.com/micro/go-micro/client"
 	"github.com/micro/go-micro/util/log"
 	auth "gomicro_example/part2/auth/proto/auth"
-	us "gomicro_example/part2/proto/user"
+	us "gomicro_example/part2/user-srv/proto/user"
 	"net/http"
 	"time"
 )

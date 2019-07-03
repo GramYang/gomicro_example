@@ -3,8 +3,8 @@ package handler
 import (
 	"context"
 	"github.com/micro/go-micro/util/log"
-	s "gomicro_example/part2/proto/user"
 	us "gomicro_example/part2/user-srv/model/user"
+	s "gomicro_example/part2/user-srv/proto/user"
 )
 
 type Service struct{}

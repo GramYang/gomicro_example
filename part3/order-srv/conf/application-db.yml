@@ -1,0 +1,6 @@
+app:
+  mysql:
+    enabled: true
+    url: gram:yangshu88@(127.0.0.1:3306)/micro_book_mall?charset=utf8
+    maxIdleConnection: 100
+    maxOpenConnection: 130

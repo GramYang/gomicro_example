@@ -9,9 +9,9 @@ import (
 	"github.com/micro/go-micro/util/log"
 	"gomicro_example/part2/basic"
 	"gomicro_example/part2/basic/config"
-	s "gomicro_example/part2/proto/user"
 	"gomicro_example/part2/user-srv/handler"
 	"gomicro_example/part2/user-srv/model"
+	s "gomicro_example/part2/user-srv/proto/user"
 	"time"
 )
 
