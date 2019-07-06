@@ -4,7 +4,6 @@ import (
 	"context"
 	"encoding/json"
 	"github.com/micro/go-micro/util/log"
-	"gomicro_example/part3/auth/handler"
 	"net/http"
 	"strconv"
 	"time"
@@ -42,7 +41,7 @@ func New(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	r.ParseForm()
+	_ = r.ParseForm()
 	bookId, _ := strconv.ParseInt(r.Form.Get("bookId"), 10, 10)
 
 	// 返回结果

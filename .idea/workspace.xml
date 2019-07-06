@@ -1,127 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="41fb9e2c-50f5-4fa8-b31f-b662eb0203a9" name="Default Changelist" comment="part3-1">
-      <change afterPath="$PROJECT_DIR$/part3/auth/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/auth/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/auth/conf/application-consul.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/auth/conf/application-redis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/auth/conf/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/auth/handler/auth.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/auth/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/auth/model/access/access.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/auth/model/access/access_internal.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/auth/model/access/access_token.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/auth/model/model.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/auth/plugin.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/auth/proto/auth/auth.micro.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/auth/proto/auth/auth.pb.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/auth/proto/auth/auth.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/basic/basic.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/basic/common/const.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/basic/config/config.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/basic/config/consul.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/basic/config/jwt.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/basic/config/mysql.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/basic/config/profiles.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/basic/config/redis.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/basic/db/db.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/basic/db/mysql.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/basic/redis/redis.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/inventory-srv/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/inventory-srv/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/inventory-srv/conf/application-consul.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/inventory-srv/conf/application-db.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/inventory-srv/conf/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/inventory-srv/handler/inventory.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/inventory-srv/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/inventory-srv/model/inventory/inventory.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/inventory-srv/model/inventory/inventory_post.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/inventory-srv/model/model.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/inventory-srv/plugin.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/inventory-srv/proto/inventory/inventory.micro.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/inventory-srv/proto/inventory/inventory.pb.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/inventory-srv/proto/inventory/inventory.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/order-srv/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/order-srv/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/order-srv/conf/application-consul.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/order-srv/conf/application-db.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/order-srv/conf/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/order-srv/handler/order.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/order-srv/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/order-srv/model/model.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/order-srv/model/order/order.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/order-srv/model/order/order_get.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/order-srv/model/order/order_post.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/order-srv/plugin.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/order-srv/proto/order/order.micro.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/order-srv/proto/order/order.pb.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/order-srv/proto/order/order.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/order-srv/subscriber/pay.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/order-web/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/order-web/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/order-web/conf/application-consul.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/order-web/conf/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/order-web/handler/handler.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/order-web/handler/wrapper.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/order-web/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/order-web/plugin.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/payment-srv/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/payment-srv/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/payment-srv/conf/application-consul.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/payment-srv/conf/application-db.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/payment-srv/conf/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/payment-srv/handler/payment.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/payment-srv/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/payment-srv/model/model.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/payment-srv/model/payment/payment.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/payment-srv/model/payment/payment_evt.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/payment-srv/model/payment/payment_post.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/payment-srv/plugin.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/payment-srv/proto/payment/payment.micro.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/payment-srv/proto/payment/payment.pb.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/payment-srv/proto/payment/payment.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/payment-web/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/payment-web/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/payment-web/conf/application-consul.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/payment-web/conf/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/payment-web/handler/handler.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/payment-web/handler/wrapper.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/payment-web/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/payment-web/plugin.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/plugins/session/gorilla.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/user-srv/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/user-srv/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/user-srv/conf/application-consul.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/user-srv/conf/application-db.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/user-srv/conf/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/user-srv/handler/user.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/user-srv/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/user-srv/model/model.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/user-srv/model/user/user.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/user-srv/model/user/user_get.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/user-srv/plugin.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/user-srv/proto/user/user.micro.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/user-srv/proto/user/user.pb.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/user-srv/proto/user/user.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/user-web/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/user-web/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/user-web/conf/application-consul.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/user-web/conf/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/user-web/handler/handler.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/user-web/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/user-web/plugin.go" afterDir="false" />
+    <list default="true" id="41fb9e2c-50f5-4fa8-b31f-b662eb0203a9" name="Default Changelist" comment="part4">
+      <change afterPath="$PROJECT_DIR$/part4/auth/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/auth/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/auth/handler/auth.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/auth/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/auth/model/access/access.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/auth/model/access/access_internal.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/auth/model/access/access_token.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/auth/model/model.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/auth/plugin.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/auth/proto/auth/auth.micro.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/auth/proto/auth/auth.pb.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/auth/proto/auth/auth.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/basic/basic.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/basic/common/app.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/basic/common/const.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/basic/common/consul.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/basic/config/config.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/basic/config/options.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/basic/options.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/config-grpc-srv/conf/micro.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/config-grpc-srv/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/inventory-srv/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/inventory-srv/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/inventory-srv/handler/inventory.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/inventory-srv/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/inventory-srv/model/inventory/inventory.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/inventory-srv/model/inventory/inventory_post.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/inventory-srv/model/model.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/inventory-srv/plugin.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/inventory-srv/proto/inventory/inventory.micro.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/inventory-srv/proto/inventory/inventory.pb.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/inventory-srv/proto/inventory/inventory.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/order-srv/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/order-srv/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/order-srv/handler/order.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/order-srv/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/order-srv/model/model.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/order-srv/model/order/order.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/order-srv/model/order/order_get.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/order-srv/model/order/order_post.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/order-srv/plugin.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/order-srv/proto/order/order.micro.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/order-srv/proto/order/order.pb.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/order-srv/proto/order/order.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/order-srv/subscriber/pay.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/order-web/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/order-web/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/order-web/handler/handler.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/order-web/handler/wrapper.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/order-web/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/order-web/plugin.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/payment-srv/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/payment-srv/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/payment-srv/handler/payment.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/payment-srv/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/payment-srv/model/model.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/payment-srv/model/payment/payment.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/payment-srv/model/payment/payment_evt.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/payment-srv/model/payment/payment_post.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/payment-srv/plugin.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/payment-srv/proto/payment/payment.micro.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/payment-srv/proto/payment/payment.pb.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/payment-srv/proto/payment/payment.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/payment-web/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/payment-web/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/payment-web/handler/handler.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/payment-web/handler/wrapper.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/payment-web/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/payment-web/plugin.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/plugins/db/db.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/plugins/db/mysql.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/plugins/jwt/jwt.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/plugins/redis/redis.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/plugins/session/gorilla.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/user-srv/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/user-srv/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/user-srv/handler/user.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/user-srv/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/user-srv/model/model.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/user-srv/model/user/user.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/user-srv/model/user/user_get.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/user-srv/plugin.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/user-srv/proto/user/user.micro.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/user-srv/proto/user/user.pb.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/user-srv/proto/user/user.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/user-web/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/user-web/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/user-web/handler/handler.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/user-web/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part4/user-web/plugin.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part2/proto/user/user.micro.go" beforeDir="false" afterPath="$PROJECT_DIR$/part2/user-srv/proto/user/user.micro.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part2/proto/user/user.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/part2/user-srv/proto/user/user.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part2/proto/user/user.proto" beforeDir="false" afterPath="$PROJECT_DIR$/part2/user-srv/proto/user/user.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part2/user-srv/handler/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/part2/user-srv/handler/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part2/user-srv/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/part2/user-srv/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part2/user-srv/model/user/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/part2/user-srv/model/user/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part2/user-srv/model/user/user_get.go" beforeDir="false" afterPath="$PROJECT_DIR$/part2/user-srv/model/user/user_get.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part2/user-web/handler/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/part2/user-web/handler/handler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part3/order-web/handler/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/part3/order-web/handler/handler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part3/payment-web/handler/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/part3/payment-web/handler/handler.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -130,7 +105,34 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/part3/user-web/main.go">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/part4/basic/config/config.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1064">
+              <caret line="56" column="19" selection-start-line="56" selection-start-column="19" selection-end-line="56" selection-end-column="19" />
+              <folding>
+                <element signature="e#16#115#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/part4/user-web/main.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="983">
+              <caret line="75" column="12" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -142,9 +144,13 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>part2</find>
+      <find>handler</find>
+      <find>subscriber</find>
+      <find>part3</find>
     </findStrings>
     <replaceStrings>
       <replace>part3</replace>
+      <replace>part4</replace>
     </replaceStrings>
   </component>
   <component name="GOROOT" path="C:\Go" />
@@ -155,63 +161,62 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/part3/user-srv/model/model.go" />
-        <option value="$PROJECT_DIR$/part3/user-srv/model/user/user_get.go" />
-        <option value="$PROJECT_DIR$/part3/user-srv/model/user/user.go" />
-        <option value="$PROJECT_DIR$/part3/user-srv/handler/user.go" />
-        <option value="$PROJECT_DIR$/part3/user-srv/main.go" />
-        <option value="$PROJECT_DIR$/part3/basic/common/const.go" />
-        <option value="$PROJECT_DIR$/part3/inventory-srv/conf/application.yml" />
-        <option value="$PROJECT_DIR$/part3/inventory-srv/conf/application-db.yml" />
-        <option value="$PROJECT_DIR$/part3/inventory-srv/conf/application-consul.yml" />
-        <option value="$PROJECT_DIR$/part3/inventory-srv/handler/inventory.go" />
-        <option value="$PROJECT_DIR$/part3/inventory-srv/model/model.go" />
-        <option value="$PROJECT_DIR$/part3/inventory-srv/model/inventory/inventory.go" />
-        <option value="$PROJECT_DIR$/part3/inventory-srv/proto/inventory/inventory.proto" />
-        <option value="$PROJECT_DIR$/part3/inventory-srv/model/inventory/inventory_post.go" />
-        <option value="$PROJECT_DIR$/part3/inventory-srv/main.go" />
-        <option value="$PROJECT_DIR$/part3/order-srv/conf/application.yml" />
-        <option value="$PROJECT_DIR$/part3/order-srv/conf/application-db.yml" />
-        <option value="$PROJECT_DIR$/part3/order-srv/conf/application-consul.yml" />
-        <option value="$PROJECT_DIR$/part3/order-srv/proto/order/order.proto" />
-        <option value="$PROJECT_DIR$/part3/order-srv/model/model.go" />
-        <option value="$PROJECT_DIR$/part3/order-srv/model/order/order.go" />
-        <option value="$PROJECT_DIR$/part3/order-srv/model/order/order_get.go" />
-        <option value="$PROJECT_DIR$/part3/order-srv/model/order/order_post.go" />
-        <option value="$PROJECT_DIR$/part3/order-srv/subscriber/pay.go" />
-        <option value="$PROJECT_DIR$/part3/order-srv/handler/order.go" />
-        <option value="$PROJECT_DIR$/part3/order-srv/main.go" />
-        <option value="$PROJECT_DIR$/part3/payment-srv/conf/application.yml" />
-        <option value="$PROJECT_DIR$/part3/payment-srv/conf/application-db.yml" />
-        <option value="$PROJECT_DIR$/part3/payment-srv/conf/application-consul.yml" />
-        <option value="$PROJECT_DIR$/part3/payment-srv/proto/payment/payment.proto" />
-        <option value="$PROJECT_DIR$/part3/payment-srv/model/payment/payment.go" />
-        <option value="$PROJECT_DIR$/part3/payment-srv/model/payment/payment_evt.go" />
-        <option value="$PROJECT_DIR$/part3/payment-srv/model/payment/payment_post.go" />
-        <option value="$PROJECT_DIR$/part3/payment-srv/model/model.go" />
-        <option value="$PROJECT_DIR$/part3/payment-srv/handler/payment.go" />
-        <option value="$PROJECT_DIR$/part3/order-web/conf/application.yml" />
-        <option value="$PROJECT_DIR$/part3/order-web/conf/application-consul.yml" />
-        <option value="$PROJECT_DIR$/part3/order-web/main.go" />
-        <option value="$PROJECT_DIR$/part3/plugins/session/gorilla.go" />
-        <option value="$PROJECT_DIR$/part3/auth/proto/auth/auth.proto" />
-        <option value="$PROJECT_DIR$/part3/auth/handler/auth.go" />
-        <option value="$PROJECT_DIR$/part3/order-web/handler/handler.go" />
-        <option value="$PROJECT_DIR$/part3/order-web/handler/wrapper.go" />
-        <option value="$PROJECT_DIR$/part3/payment-srv/main.go" />
-        <option value="$PROJECT_DIR$/part3/payment-web/conf/application.yml" />
-        <option value="$PROJECT_DIR$/part3/payment-web/conf/application-consul.yml" />
-        <option value="$PROJECT_DIR$/part3/payment-web/handler/handler.go" />
-        <option value="$PROJECT_DIR$/part3/payment-web/handler/wrapper.go" />
-        <option value="$PROJECT_DIR$/part3/payment-web/main.go" />
-        <option value="$PROJECT_DIR$/part3/user-web/handler/handler.go" />
-        <option value="$PROJECT_DIR$/part3/user-web/main.go" />
+        <option value="$PROJECT_DIR$/part4/auth/model/model.go" />
+        <option value="$PROJECT_DIR$/part4/basic/db/mysql.go" />
+        <option value="$PROJECT_DIR$/part4/basic/db/db.go" />
+        <option value="$PROJECT_DIR$/part4/basic/redis/redis.go" />
+        <option value="$PROJECT_DIR$/part4/inventory-srv/handler/inventory.go" />
+        <option value="$PROJECT_DIR$/part4/inventory-srv/model/model.go" />
+        <option value="$PROJECT_DIR$/part4/order-srv/subscriber/pay.go" />
+        <option value="$PROJECT_DIR$/part4/order-srv/model/model.go" />
+        <option value="$PROJECT_DIR$/part4/order-srv/model/order/order.go" />
+        <option value="$PROJECT_DIR$/part4/order-srv/handler/order.go" />
+        <option value="$PROJECT_DIR$/part4/order-web/handler/wrapper.go" />
+        <option value="$PROJECT_DIR$/part4/order-web/handler/handler.go" />
+        <option value="$PROJECT_DIR$/part4/payment-srv/model/model.go" />
+        <option value="$PROJECT_DIR$/part4/payment-srv/model/payment/payment_evt.go" />
+        <option value="$PROJECT_DIR$/part4/payment-srv/model/payment/payment.go" />
+        <option value="$PROJECT_DIR$/part4/payment-srv/handler/payment.go" />
+        <option value="$PROJECT_DIR$/part4/payment-web/handler/wrapper.go" />
+        <option value="$PROJECT_DIR$/part4/payment-web/handler/handler.go" />
+        <option value="$PROJECT_DIR$/part4/user-srv/model/model.go" />
+        <option value="$PROJECT_DIR$/part4/user-srv/model/user/user.go" />
+        <option value="$PROJECT_DIR$/part4/user-srv/handler/user.go" />
+        <option value="$PROJECT_DIR$/part4/user-web/handler/handler.go" />
+        <option value="$PROJECT_DIR$/go.mod" />
+        <option value="$PROJECT_DIR$/part4/config-grpc-srv/main.go" />
+        <option value="$PROJECT_DIR$/part4/config-grpc-srv/conf/micro.yml" />
+        <option value="$PROJECT_DIR$/part4/plugins/db/db.go" />
+        <option value="$PROJECT_DIR$/part4/plugins/db/mysql.go" />
+        <option value="$PROJECT_DIR$/part4/plugins/jwt/jwt.go" />
+        <option value="$PROJECT_DIR$/part4/plugins/redis/redis.go" />
+        <option value="$PROJECT_DIR$/part4/basic/common/app.go" />
+        <option value="$PROJECT_DIR$/part4/basic/common/consul.go" />
+        <option value="$PROJECT_DIR$/part4/basic/options.go" />
+        <option value="$PROJECT_DIR$/part4/basic/config/config.go" />
+        <option value="$PROJECT_DIR$/part4/basic/config/options.go" />
+        <option value="$PROJECT_DIR$/part4/basic/basic.go" />
+        <option value="$PROJECT_DIR$/part4/auth/model/access/access.go" />
+        <option value="$PROJECT_DIR$/part4/auth/model/access/access_internal.go" />
+        <option value="$PROJECT_DIR$/part4/auth/model/access/access_token.go" />
+        <option value="$PROJECT_DIR$/part4/auth/main.go" />
+        <option value="$PROJECT_DIR$/part4/inventory-srv/model/inventory/inventory_post.go" />
+        <option value="$PROJECT_DIR$/part4/inventory-srv/main.go" />
+        <option value="$PROJECT_DIR$/part4/order-srv/model/order/order_get.go" />
+        <option value="$PROJECT_DIR$/part4/order-srv/model/order/order_post.go" />
+        <option value="$PROJECT_DIR$/part4/order-srv/main.go" />
+        <option value="$PROJECT_DIR$/part4/order-web/main.go" />
+        <option value="$PROJECT_DIR$/part4/payment-srv/model/payment/payment_post.go" />
+        <option value="$PROJECT_DIR$/part4/payment-srv/main.go" />
+        <option value="$PROJECT_DIR$/part4/payment-web/main.go" />
+        <option value="$PROJECT_DIR$/part4/user-srv/model/user/user_get.go" />
+        <option value="$PROJECT_DIR$/part4/user-srv/main.go" />
+        <option value="$PROJECT_DIR$/part4/user-web/main.go" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-24" />
-    <option name="y" value="15" />
+    <option name="x" value="-6" />
     <option name="width" value="1944" />
     <option name="height" value="531" />
   </component>
@@ -223,6 +228,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -233,18 +239,31 @@
             <path>
               <item name="gomicro_example" type="b2602c69:ProjectViewProjectNode" />
               <item name="gomicro_example" type="462c0819:PsiDirectoryNode" />
-              <item name="part2" type="462c0819:PsiDirectoryNode" />
+              <item name="part4" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="gomicro_example" type="b2602c69:ProjectViewProjectNode" />
               <item name="gomicro_example" type="462c0819:PsiDirectoryNode" />
-              <item name="part3" type="462c0819:PsiDirectoryNode" />
+              <item name="part4" type="462c0819:PsiDirectoryNode" />
+              <item name="basic" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gomicro_example" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gomicro_example" type="462c0819:PsiDirectoryNode" />
+              <item name="part4" type="462c0819:PsiDirectoryNode" />
+              <item name="basic" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gomicro_example" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gomicro_example" type="462c0819:PsiDirectoryNode" />
+              <item name="part4" type="462c0819:PsiDirectoryNode" />
+              <item name="user-web" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -254,22 +273,22 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/part3" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/part4" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Go" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Lenovo\golandProjects\gomicro_example\part3\user-srv" />
-      <recent name="C:\Users\Lenovo\golandProjects\gomicro_example\part2\user-srv" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Lenovo\golandProjects\gomicro_example\part4" />
       <recent name="C:\Users\Lenovo\golandProjects\gomicro_example\part3" />
       <recent name="C:\Users\Lenovo\golandProjects\gomicro_example\part2\auth" />
       <recent name="C:\Users\Lenovo\golandProjects\gomicro_example\part2" />
       <recent name="C:\Users\Lenovo\golandProjects\gomicro_example\part1" />
-      <recent name="C:\Users\Lenovo\golandProjects\gomicro_example\part1\user-web" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Lenovo\golandProjects\gomicro_example\part3\user-srv" />
+      <recent name="C:\Users\Lenovo\golandProjects\gomicro_example\part2\user-srv" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -310,23 +329,32 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49907234" visible="true" weight="0.28860146" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49907234" visible="true" weight="0.30800325" />
       <window_info id="Structure" order="1" sideWeight="0.5009276" side_tool="true" weight="0.26596606" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3283859" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.37476808" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.7625232" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.77272725" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.8478664" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.8484849" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.3283859" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.3283859" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -349,304 +377,366 @@
     <MESSAGE value="part2-1" />
     <MESSAGE value="修复part1读取conf路径错误" />
     <MESSAGE value="part3-1" />
-    <option name="LAST_COMMIT_MESSAGE" value="part3-1" />
+    <MESSAGE value="part3" />
+    <MESSAGE value="part4" />
+    <option name="LAST_COMMIT_MESSAGE" value="part4" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
     <proxy>https://goproxy.io</proxy>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/part3/order-web/conf/application-consul.yml">
+    <entry file="file://$PROJECT_DIR$/part4/basic/common/app.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+        <state relative-caret-position="266">
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/part3/order-web/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/part3/order-web/plugin.go">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/part3/basic/basic.go">
+    <entry file="file://$PROJECT_DIR$/part4/basic/common/consul.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+        <state relative-caret-position="133">
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/part3/basic/redis/redis.go">
+    <entry file="file://$USER_HOME$/go/pkg/mod/github.com/micro/go-micro@v1.5.0/config/config.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-950">
-          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+        <state relative-caret-position="171">
+          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/part3/basic/db/db.go">
+    <entry file="file://$PROJECT_DIR$/part4/basic/options.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+        <state relative-caret-position="19">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/part3/basic/db/mysql.go">
+    <entry file="file://$PROJECT_DIR$/part4/basic/basic.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-81">
-          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/part3/basic/config/redis.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-912">
-          <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+        <state relative-caret-position="147">
+          <caret line="13" column="31" lean-forward="true" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
           <folding>
-            <element signature="e#16#37#0" expanded="true" />
+            <element signature="e#15#134#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/part3/basic/config/profiles.go">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/part3/basic/config/mysql.go">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/part3/basic/config/jwt.go">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/part3/basic/config/consul.go">
+    <entry file="file://$PROJECT_DIR$/part4/basic/config/options.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-195" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/part3/basic/config/config.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1411" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/part3/auth/model/access/access_internal.go">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/part3/auth/model/access/access.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="29" column="1" lean-forward="true" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
+        <state relative-caret-position="114">
+          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/part3/auth/model/access/access_token.go">
+    <entry file="file://$PROJECT_DIR$/part4/auth/model/model.go">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/part4/auth/model/access/access.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-76">
-          <caret line="54" column="42" selection-start-line="54" selection-start-column="42" selection-end-line="54" selection-end-column="42" />
+        <state relative-caret-position="190">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/part2/auth/handler/auth.go">
+    <entry file="file://$PROJECT_DIR$/part4/auth/model/access/access_internal.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-119" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/part3/auth/proto/auth/auth.micro.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+        <state relative-caret-position="1824">
+          <caret line="96" column="1" selection-start-line="96" selection-start-column="1" selection-end-line="96" selection-end-column="1" />
+          <folding>
+            <element signature="e#16#110#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/part3/auth/main.go">
+    <entry file="file://$PROJECT_DIR$/part4/auth/model/access/access_token.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="42" column="71" lean-forward="true" selection-start-line="42" selection-start-column="51" selection-end-line="42" selection-end-column="71" />
+        <state relative-caret-position="1653">
+          <caret line="87" column="1" selection-start-line="87" selection-start-column="1" selection-end-line="87" selection-end-column="1" />
+          <folding>
+            <element signature="e#16#184#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/part4/auth/handler/auth.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/part4/auth/plugin.go">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/part4/auth/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1026">
+          <caret line="54" column="4" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
           <folding>
             <element signature="e#14#399#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/part3/plugins/session/gorilla.go">
+    <entry file="file://$PROJECT_DIR$/part4/inventory-srv/handler/inventory.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="35" column="36" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
+        <state relative-caret-position="-100">
+          <folding>
+            <element signature="e#17#198#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/part3/order-web/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-404">
-          <caret line="17" column="12" lean-forward="true" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/part2/auth/proto/auth/auth.proto">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-57" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/part2/user-srv/proto/user/user.proto">
+    <entry file="file://$PROJECT_DIR$/part4/inventory-srv/model/model.go">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/part3/inventory-srv/proto/inventory/inventory.proto">
+    <entry file="file://$PROJECT_DIR$/part4/inventory-srv/model/inventory/inventory.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-475" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/part3/order-srv/proto/order/order.proto">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="36" column="1" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/part2/user-srv/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-114">
+        <state relative-caret-position="-119">
           <folding>
-            <element signature="e#14#411#0" expanded="true" />
+            <element signature="e#19#44#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/part3/auth/proto/auth/auth.proto">
+    <entry file="file://$PROJECT_DIR$/part4/inventory-srv/model/inventory/inventory_post.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="29" column="1" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
+        <state relative-caret-position="-1335">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/part3/auth/handler/auth.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="71" column="9" lean-forward="true" selection-start-line="71" selection-start-column="9" selection-end-line="71" selection-end-column="9" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/part4/inventory-srv/plugin.go">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/part3/order-web/handler/wrapper.go">
+    <entry file="file://$PROJECT_DIR$/part4/inventory-srv/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="26" column="22" lean-forward="true" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/part3/order-web/handler/handler.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="35" column="13" lean-forward="true" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+        <state relative-caret-position="1040">
+          <caret line="77" column="5" lean-forward="true" selection-start-line="77" selection-start-column="5" selection-end-line="77" selection-end-column="5" />
           <folding>
-            <element signature="e#17#362#0" expanded="true" />
+            <element signature="e#14#471#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/part3/payment-srv/main.go">
+    <entry file="file://$PROJECT_DIR$/part4/order-srv/handler/order.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/part4/order-srv/model/model.go">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/part4/order-srv/model/order/order.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-366">
+          <folding>
+            <element signature="e#15#189#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/part4/order-srv/model/order/order_post.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/part4/order-srv/model/order/order_get.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/part4/order-srv/subscriber/pay.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#20#182#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/part4/order-srv/plugin.go">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/part4/order-srv/main.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <caret line="16" column="55" lean-forward="true" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/part3/payment-srv/proto/payment/payment.proto">
+    <entry file="file://$PROJECT_DIR$/part4/order-web/handler/handler.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="41" column="1" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
+        <state relative-caret-position="-157">
+          <caret line="52" column="24" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
+          <folding>
+            <element signature="e#17#361#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/part3/payment-web/conf/application-consul.yml">
+    <entry file="file://$PROJECT_DIR$/part4/order-web/handler/wrapper.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-342">
+          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+          <folding>
+            <element signature="e#17#213#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/part4/order-web/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1629">
+          <caret line="91" column="1" selection-start-line="91" selection-start-column="1" selection-end-line="91" selection-end-column="1" />
+          <folding>
+            <element signature="e#14#341#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/part4/payment-srv/handler/payment.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-309">
+          <folding>
+            <element signature="e#17#184#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/part4/payment-srv/model/model.go">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/part4/payment-srv/model/payment/payment.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-570">
+          <folding>
+            <element signature="e#17#257#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/part4/payment-srv/model/payment/payment_evt.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-57">
+          <folding>
+            <element signature="e#17#167#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/part4/payment-srv/model/payment/payment_post.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-665">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/part4/payment-srv/plugin.go">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/part4/payment-srv/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-309">
+          <caret line="55" column="4" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="4" />
+          <folding>
+            <element signature="e#14#459#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/part4/payment-web/handler/wrapper.go">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/part4/payment-web/handler/handler.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-741" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/part4/payment-web/plugin.go">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/part4/payment-web/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="888">
+          <caret line="90" column="1" selection-start-line="90" selection-start-column="1" selection-end-line="90" selection-end-column="1" />
+          <folding>
+            <element signature="e#14#343#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/part4/user-srv/handler/user.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-176">
+          <folding>
+            <element signature="e#17#171#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/part4/user-srv/model/model.go">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/part4/user-srv/model/user/user.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#14#90#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/part4/user-srv/model/user/user_get.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
-          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+          <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/part3/payment-web/conf/application.yml">
+    <entry file="file://$PROJECT_DIR$/part4/user-srv/plugin.go">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/part3/payment-web/handler/handler.go">
+    <entry file="file://$PROJECT_DIR$/part4/user-web/handler/handler.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-76">
-          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+        <state relative-caret-position="-2456" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/part4/user-srv/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="74" column="12" selection-start-line="74" selection-start-column="8" selection-end-line="74" selection-end-column="12" />
           <folding>
-            <element signature="e#17#193#0" expanded="true" />
+            <element signature="e#14#491#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/part3/payment-web/handler/wrapper.go">
+    <entry file="file://$PROJECT_DIR$/part4/user-web/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-802">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/part3/payment-web/plugin.go">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/part3/payment-web/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="817">
-          <caret line="43" column="36" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
-          <folding>
-            <element signature="e#14#102#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/part3/user-srv/conf/application.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/part3/user-srv/conf/application-consul.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/part3/user-srv/conf/application-db.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/part3/user-srv/handler/user.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-309" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/part3/user-srv/model/model.go">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/part3/user-srv/model/user/user.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-114" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/part3/user-srv/model/user/user_get.go">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/part3/user-srv/proto/user/user.proto">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-171" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/part3/user-srv/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-195" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/part3/user-web/conf/application-consul.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/part3/user-web/conf/application.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/part3/user-web/handler/handler.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="157" column="4" selection-start-line="157" selection-start-column="4" selection-end-line="157" selection-end-column="4" />
+        <state relative-caret-position="983">
+          <caret line="75" column="12" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/part3/user-web/main.go">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/part4/basic/config/config.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="58" column="1" selection-start-line="58" selection-start-column="1" selection-end-line="58" selection-end-column="1" />
+        <state relative-caret-position="1064">
+          <caret line="56" column="19" selection-start-line="56" selection-start-column="19" selection-end-line="56" selection-end-column="19" />
           <folding>
-            <element signature="e#14#326#0" expanded="true" />
+            <element signature="e#16#115#0" expanded="true" />
           </folding>
         </state>
       </provider>
