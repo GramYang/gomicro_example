@@ -14,6 +14,7 @@ import (
 	"gomicro_example/part4/basic"
 	"gomicro_example/part4/basic/common"
 	"gomicro_example/part4/basic/config"
+	_ "gomicro_example/part4/plugins/redis"
 	"time"
 )
 

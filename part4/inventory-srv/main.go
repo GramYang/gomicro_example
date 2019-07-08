@@ -15,6 +15,7 @@ import (
 	"gomicro_example/part4/inventory-srv/handler"
 	"gomicro_example/part4/inventory-srv/model"
 	proto "gomicro_example/part4/inventory-srv/proto/inventory"
+	_ "gomicro_example/part4/plugins/db"
 	"time"
 )
 

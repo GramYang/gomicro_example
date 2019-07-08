@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	_ "github.com/go-sql-driver/mysql"
 	"github.com/micro/cli"
 	"github.com/micro/go-config/source/grpc"
 	"github.com/micro/go-micro"
@@ -11,6 +12,8 @@ import (
 	"gomicro_example/part4/basic"
 	"gomicro_example/part4/basic/common"
 	"gomicro_example/part4/basic/config"
+	_ "gomicro_example/part4/plugins/db"
+	_ "gomicro_example/part4/plugins/redis"
 	"gomicro_example/part4/user-srv/handler"
 	"gomicro_example/part4/user-srv/model"
 	s "gomicro_example/part4/user-srv/proto/user"

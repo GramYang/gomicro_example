@@ -94,5 +94,5 @@ func Init(opts ...Option) {
 
 	c = &configurator{}
 
-	c.init(ops)
+	_ = c.init(ops)
 }

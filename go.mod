@@ -14,6 +14,9 @@ require (
 	github.com/micro/go-micro v1.5.0
 	github.com/nats-io/nats-server/v2 v2.0.0 // indirect
 	github.com/prometheus/common v0.4.1
+	go.uber.org/zap v1.9.1
+	google.golang.org/grpc v1.21.1
+	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 )
 
 replace github.com/testcontainers/testcontainer-go => github.com/testcontainers/testcontainers-go v0.0.2

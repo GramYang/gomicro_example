@@ -15,6 +15,7 @@ import (
 	"gomicro_example/part4/payment-srv/handler"
 	"gomicro_example/part4/payment-srv/model"
 	s "gomicro_example/part4/payment-srv/proto/payment"
+	_ "gomicro_example/part4/plugins/db"
 	"time"
 )
 

@@ -16,6 +16,7 @@ import (
 	"gomicro_example/part4/order-srv/model"
 	proto "gomicro_example/part4/order-srv/proto/order"
 	"gomicro_example/part4/order-srv/subscriber"
+	_ "gomicro_example/part4/plugins/jwt"
 	"time"
 )
 
