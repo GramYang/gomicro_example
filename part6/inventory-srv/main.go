@@ -38,6 +38,8 @@ func main() {
 	// 新建服务
 	service := micro.NewService(
 		micro.Name(cfg.Name),
+		micro.RegisterTTL(time.Second*15),
+		micro.RegisterInterval(time.Second*10),
 		micro.Registry(micReg),
 		micro.Version(cfg.Version),
 	)
@@ -53,7 +55,7 @@ func main() {
 	)
 
 	// 注册服务
-	proto.RegisterInventoryHandler(service.Server(), new(handler.Service))
+	_ = proto.RegisterInventoryHandler(service.Server(), new(handler.Service))
 
 	// 启动服务
 	if err := service.Run(); err != nil {

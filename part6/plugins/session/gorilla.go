@@ -47,7 +47,7 @@ func GetSession(w http.ResponseWriter, r *http.Request) *sessions.Session {
 
 		// 保存新的session
 		ses.ID = sId
-		ses.Save(r, w)
+		_ = ses.Save(r, w)
 	}
 	return ses
 }

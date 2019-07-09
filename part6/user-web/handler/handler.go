@@ -3,8 +3,10 @@ package handler
 import (
 	"context"
 	"encoding/json"
+	hystrix_go "github.com/afex/hystrix-go/hystrix"
 	"github.com/micro/go-micro/client"
 	"github.com/micro/go-micro/util/log"
+	"github.com/micro/go-plugins/wrapper/breaker/hystrix"
 	auth "gomicro_example/part6/auth/proto/auth"
 	"gomicro_example/part6/plugins/session"
 	us "gomicro_example/part6/user-srv/proto/user"
@@ -24,8 +26,11 @@ type Error struct {
 }
 
 func Init() {
-	serviceClient = us.NewUserService("mu.micro.book.srv.user", client.DefaultClient)
-	authClient = auth.NewService("mu.micro.book.srv.auth", client.DefaultClient)
+	hystrix_go.DefaultVolumeThreshold = 1
+	hystrix_go.DefaultErrorPercentThreshold = 1
+	cl := hystrix.NewClientWrapper()(client.DefaultClient)
+	serviceClient = us.NewUserService("mu.micro.book.srv.user", cl)
+	authClient = auth.NewService("mu.micro.book.srv.auth", cl)
 }
 
 // Login 登录入口
@@ -82,6 +87,11 @@ func Login(w http.ResponseWriter, r *http.Request) {
 		cookie := http.Cookie{Name: "remember-me-token", Value: rsp2.Token, Path: "/", Expires: expire, MaxAge: 90000}
 		http.SetCookie(w, &cookie)
 
+		// 同步到session中
+		sess := session.GetSession(w, r)
+		sess.Values["userId"] = rsp.User.Id
+		sess.Values["userName"] = rsp.User.Name
+		_ = sess.Save(r, w)
 	} else {
 		response["success"] = false
 		response["error"] = &Error{

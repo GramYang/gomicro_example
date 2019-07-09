@@ -39,6 +39,8 @@ func main() {
 	// 新建服务
 	service := micro.NewService(
 		micro.Name("mu.micro.book.srv.user"),
+		micro.RegisterTTL(time.Second*15),
+		micro.RegisterInterval(time.Second*10),
 		micro.Registry(micReg),
 		micro.Version("latest"),
 	)

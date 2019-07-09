@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"github.com/afex/hystrix-go/hystrix"
 	"github.com/micro/cli"
 	"github.com/micro/go-config/source/grpc"
 	"github.com/micro/go-micro/registry"
@@ -11,7 +12,11 @@ import (
 	"gomicro_example/part6/basic"
 	"gomicro_example/part6/basic/common"
 	"gomicro_example/part6/basic/config"
+	"gomicro_example/part6/plugins/breaker"
+	_ "gomicro_example/part6/plugins/session"
 	"gomicro_example/part6/user-web/handler"
+	"net"
+	"net/http"
 	"time"
 )
 
@@ -35,6 +40,8 @@ func main() {
 	service := web.NewService(
 		web.Name(cfg.Name),
 		web.Version(cfg.Version),
+		web.RegisterTTL(time.Second*15),
+		web.RegisterInterval(time.Second*10),
 		web.Registry(micReg),
 		web.Address(cfg.Addr()),
 	)
@@ -51,10 +58,15 @@ func main() {
 	}
 
 	// 注册登录接口
-	service.HandleFunc("/user/login", handler.Login)
+	handlerLogin := http.HandlerFunc(handler.Login)
+	service.Handle("/user/login", breaker.BreakerWrapper(handlerLogin))
 	// 注册退出接口
 	service.HandleFunc("/user/logout", handler.Logout)
 	service.HandleFunc("/user/test", handler.TestSession)
+
+	hystrixStreamHandler := hystrix.NewStreamHandler()
+	hystrixStreamHandler.Start()
+	go http.ListenAndServe(net.JoinHostPort("", "81"), hystrixStreamHandler)
 
 	// 运行服务
 	if err := service.Run(); err != nil {

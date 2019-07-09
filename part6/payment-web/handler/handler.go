@@ -3,8 +3,10 @@ package handler
 import (
 	"context"
 	"encoding/json"
+	hystrix_go "github.com/afex/hystrix-go/hystrix"
 	"github.com/micro/go-micro/client"
 	"github.com/micro/go-micro/util/log"
+	"github.com/micro/go-plugins/wrapper/breaker/hystrix"
 	auth "gomicro_example/part6/auth/proto/auth"
 	payS "gomicro_example/part6/payment-srv/proto/payment"
 	"net/http"
@@ -24,12 +26,16 @@ type Error struct {
 }
 
 func Init() {
-	serviceClient = payS.NewPaymentService("mu.micro.book.srv.payment", client.DefaultClient)
-	authClient = auth.NewService("mu.micro.book.srv.auth", client.DefaultClient)
+	hystrix_go.DefaultVolumeThreshold = 1
+	hystrix_go.DefaultErrorPercentThreshold = 1
+	cl := hystrix.NewClientWrapper()(client.DefaultClient)
+	serviceClient = payS.NewPaymentService("mu.micro.book.srv.payment", cl)
+	authClient = auth.NewService("mu.micro.book.srv.auth", cl)
 }
 
 // PayOrder 支付订单
 func PayOrder(w http.ResponseWriter, r *http.Request) {
+
 	// 只接受POST请求
 	if r.Method != "POST" {
 		log.Logf("非法请求")
@@ -37,7 +43,7 @@ func PayOrder(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	_ = r.ParseForm()
+	r.ParseForm()
 
 	orderId, _ := strconv.ParseInt(r.Form.Get("orderId"), 10, 10)
 

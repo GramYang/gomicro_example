@@ -36,6 +36,8 @@ func main() {
 	service := web.NewService(
 		web.Name(cfg.Name),
 		web.Version(cfg.Version),
+		web.RegisterTTL(time.Second*15),
+		web.RegisterInterval(time.Second*10),
 		web.Registry(micReg),
 		web.Address(cfg.Addr()),
 	)

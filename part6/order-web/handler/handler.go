@@ -8,7 +8,9 @@ import (
 	"strconv"
 	"time"
 
+	hystrix_go "github.com/afex/hystrix-go/hystrix"
 	"github.com/micro/go-micro/client"
+	"github.com/micro/go-plugins/wrapper/breaker/hystrix"
 	auth "gomicro_example/part6/auth/proto/auth"
 	invS "gomicro_example/part6/inventory-srv/proto/inventory"
 	order "gomicro_example/part6/order-srv/proto/order"
@@ -28,8 +30,18 @@ type Error struct {
 }
 
 func Init() {
-	serviceClient = order.NewOrdersService("mu.micro.book.srv.orders", client.DefaultClient)
-	authClient = auth.NewService("mu.micro.book.srv.auth", client.DefaultClient)
+	hystrix_go.DefaultVolumeThreshold = 1
+	hystrix_go.DefaultErrorPercentThreshold = 1
+	cl := hystrix.NewClientWrapper()(client.DefaultClient)
+	_ = cl.Init(
+		client.Retries(3),
+		client.Retry(func(ctx context.Context, req client.Request, retryCount int, err error) (bool, error) {
+			log.Log(req.Method(), retryCount, " client retry")
+			return true, nil
+		}),
+	)
+	serviceClient = order.NewOrdersService("mu.micro.book.srv.orders", cl)
+	authClient = auth.NewService("mu.micro.book.srv.auth", cl)
 }
 
 // New 新增订单入口
@@ -76,5 +88,5 @@ func New(w http.ResponseWriter, r *http.Request) {
 
 //
 func Hello(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("hello"))
+	_, _ = w.Write([]byte("hello"))
 }

@@ -39,6 +39,8 @@ func main() {
 	service := micro.NewService(
 		micro.Name(cfg.Name),
 		micro.Version(cfg.Version),
+		micro.RegisterTTL(time.Second*15),
+		micro.RegisterInterval(time.Second*10),
 		micro.Registry(micReg),
 		micro.Address(cfg.Addr()),
 	)

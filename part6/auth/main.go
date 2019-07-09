@@ -7,7 +7,7 @@ import (
 	"github.com/micro/go-micro"
 	"github.com/micro/go-micro/registry"
 	"github.com/micro/go-micro/registry/consul"
-	"go.uber.org/zap"
+	"github.com/micro/go-micro/util/log"
 	"gomicro_example/part6/auth/handler"
 	"gomicro_example/part6/auth/model"
 	s "gomicro_example/part6/auth/proto/auth"
@@ -15,12 +15,10 @@ import (
 	"gomicro_example/part6/basic/common"
 	"gomicro_example/part6/basic/config"
 	_ "gomicro_example/part6/plugins/redis"
-	z "gomicro_example/part6/plugins/zap"
 	"time"
 )
 
 var (
-	log     = z.GetLogger()
 	appName = "auth_srv"
 	cfg     = &authCfg{}
 )
@@ -59,8 +57,7 @@ func main() {
 
 	// 启动服务
 	if err := service.Run(); err != nil {
-		log.Error("[main] error")
-		panic(err)
+		log.Fatal(err)
 	}
 }
 
@@ -81,17 +78,14 @@ func initCfg() {
 		grpc.WithPath("micro"),
 	)
 
-	basic.Init(
-		config.WithSource(source),
-		config.WithApp(appName),
-	)
+	basic.Init(config.WithSource(source))
 
 	err := config.C().App(appName, cfg)
 	if err != nil {
 		panic(err)
 	}
 
-	log.Info("[initCfg] 配置", zap.Any("cfg", cfg))
+	log.Logf("[initCfg] 配置，cfg：%v", cfg)
 
 	return
 }

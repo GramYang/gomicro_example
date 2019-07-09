@@ -11,6 +11,8 @@ import (
 	"gomicro_example/part5/basic"
 	"gomicro_example/part5/basic/common"
 	"gomicro_example/part5/basic/config"
+	_ "gomicro_example/part5/plugins/session"
+	_ "gomicro_example/part5/plugins/zap"
 	"gomicro_example/part5/user-web/handler"
 	"time"
 )

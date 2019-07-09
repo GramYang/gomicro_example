@@ -2,9 +2,7 @@ package handler
 
 import (
 	"context"
-
 	"github.com/micro/go-micro/util/log"
-
 	inv "gomicro_example/part6/inventory-srv/model/inventory"
 	proto "gomicro_example/part6/inventory-srv/proto/inventory"
 )
@@ -13,8 +11,7 @@ var (
 	invService inv.Service
 )
 
-type Service struct {
-}
+type Service struct{}
 
 // Init 初始化handler
 func Init() {

@@ -9,6 +9,7 @@ import (
 	"github.com/prometheus/common/log"
 	"gomicro_example/part3/basic"
 	"gomicro_example/part3/basic/config"
+	_ "gomicro_example/part3/plugins/session"
 	"gomicro_example/part3/user-web/handler"
 	"time"
 )
