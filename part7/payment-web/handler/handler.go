@@ -1,14 +1,13 @@
 package handler
 
 import (
-	"context"
 	"encoding/json"
 	hystrix_go "github.com/afex/hystrix-go/hystrix"
 	"github.com/micro/go-micro/client"
 	"github.com/micro/go-micro/util/log"
 	"github.com/micro/go-plugins/wrapper/breaker/hystrix"
-	auth "gomicro_example/part6/auth/proto/auth"
-	payS "gomicro_example/part6/payment-srv/proto/payment"
+	auth "gomicro_example/part7/auth/proto/auth"
+	payS "gomicro_example/part7/payment-srv/proto/payment"
 	"net/http"
 	"strconv"
 	"time"
@@ -35,6 +34,7 @@ func Init() {
 
 // PayOrder 支付订单
 func PayOrder(w http.ResponseWriter, r *http.Request) {
+	ctx := r.Context()
 
 	// 只接受POST请求
 	if r.Method != "POST" {
@@ -43,12 +43,12 @@ func PayOrder(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	r.ParseForm()
+	_ = r.ParseForm()
 
 	orderId, _ := strconv.ParseInt(r.Form.Get("orderId"), 10, 10)
 
 	// 调用后台服务
-	_, err := serviceClient.PayOrder(context.TODO(), &payS.Request{
+	_, err := serviceClient.PayOrder(ctx, &payS.Request{
 		OrderId: orderId,
 	})
 

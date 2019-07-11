@@ -3,8 +3,8 @@ package handler
 import (
 	"context"
 	"github.com/micro/go-micro/util/log"
-	inv "gomicro_example/part6/inventory-srv/model/inventory"
-	proto "gomicro_example/part6/inventory-srv/proto/inventory"
+	inv "gomicro_example/part7/inventory-srv/model/inventory"
+	proto "gomicro_example/part7/inventory-srv/proto/inventory"
 )
 
 var (

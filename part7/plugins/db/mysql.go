@@ -3,7 +3,7 @@ package db
 import (
 	"database/sql"
 	"github.com/micro/go-micro/util/log"
-	"gomicro_example/part6/basic/config"
+	"gomicro_example/part7/basic/config"
 )
 
 type db struct {

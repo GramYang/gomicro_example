@@ -3,8 +3,8 @@ package handler
 import (
 	"context"
 	"github.com/micro/go-micro/util/log"
-	"gomicro_example/part6/auth/model/access"
-	auth "gomicro_example/part6/auth/proto/auth"
+	"gomicro_example/part7/auth/model/access"
+	auth "gomicro_example/part7/auth/proto/auth"
 	"strconv"
 )
 

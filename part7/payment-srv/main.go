@@ -9,13 +9,16 @@ import (
 	"github.com/micro/go-micro/registry"
 	"github.com/micro/go-micro/registry/consul"
 	"github.com/micro/go-micro/util/log"
-	"gomicro_example/part6/basic"
-	"gomicro_example/part6/basic/common"
-	"gomicro_example/part6/basic/config"
-	"gomicro_example/part6/payment-srv/handler"
-	"gomicro_example/part6/payment-srv/model"
-	s "gomicro_example/part6/payment-srv/proto/payment"
-	_ "gomicro_example/part6/plugins/db"
+	openTrace "github.com/micro/go-plugins/wrapper/trace/opentracing"
+	"github.com/opentracing/opentracing-go"
+	"gomicro_example/part7/basic"
+	"gomicro_example/part7/basic/common"
+	"gomicro_example/part7/basic/config"
+	"gomicro_example/part7/payment-srv/handler"
+	"gomicro_example/part7/payment-srv/model"
+	s "gomicro_example/part7/payment-srv/proto/payment"
+	_ "gomicro_example/part7/plugins/db"
+	tracer "gomicro_example/part7/plugins/tracer/jaeger"
 	"time"
 )
 
@@ -35,6 +38,13 @@ func main() {
 	// 使用consul注册
 	micReg := consul.NewRegistry(registryOptions)
 
+	t, io, err := tracer.NewTracer(cfg.Name, "")
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer io.Close()
+
+	opentracing.SetGlobalTracer(t)
 	// 新建服务
 	service := micro.NewService(
 		micro.Name(cfg.Name),
@@ -43,6 +53,7 @@ func main() {
 		micro.RegisterInterval(time.Second*10),
 		micro.Registry(micReg),
 		micro.Address(cfg.Addr()),
+		micro.WrapHandler(openTrace.NewHandlerWrapper()),
 	)
 
 	// 服务初始化

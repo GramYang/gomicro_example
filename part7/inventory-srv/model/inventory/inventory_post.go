@@ -3,9 +3,9 @@ package inventory
 import (
 	"fmt"
 	"github.com/micro/go-micro/util/log"
-	"gomicro_example/part6/basic/common"
-	proto "gomicro_example/part6/inventory-srv/proto/inventory"
-	"gomicro_example/part6/plugins/db"
+	"gomicro_example/part7/basic/common"
+	proto "gomicro_example/part7/inventory-srv/proto/inventory"
+	"gomicro_example/part7/plugins/db"
 )
 
 // Sell 销存

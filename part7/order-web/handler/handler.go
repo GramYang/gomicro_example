@@ -11,10 +11,10 @@ import (
 	hystrix_go "github.com/afex/hystrix-go/hystrix"
 	"github.com/micro/go-micro/client"
 	"github.com/micro/go-plugins/wrapper/breaker/hystrix"
-	auth "gomicro_example/part6/auth/proto/auth"
-	invS "gomicro_example/part6/inventory-srv/proto/inventory"
-	order "gomicro_example/part6/order-srv/proto/order"
-	"gomicro_example/part6/plugins/session"
+	auth "gomicro_example/part7/auth/proto/auth"
+	invS "gomicro_example/part7/inventory-srv/proto/inventory"
+	order "gomicro_example/part7/order-srv/proto/order"
+	"gomicro_example/part7/plugins/session"
 )
 
 var (
@@ -46,6 +46,8 @@ func Init() {
 
 // New 新增订单入口
 func New(w http.ResponseWriter, r *http.Request) {
+	ctx := r.Context()
+
 	// 只接受POST请求
 	if r.Method != "POST" {
 		log.Logf("非法请求")
@@ -60,7 +62,7 @@ func New(w http.ResponseWriter, r *http.Request) {
 	response := map[string]interface{}{}
 
 	// 调用后台服务
-	rsp, err := serviceClient.New(context.TODO(), &order.Request{
+	rsp, err := serviceClient.New(ctx, &order.Request{
 		BookId: bookId,
 		UserId: session.GetSession(w, r).Values["userId"].(int64),
 	})

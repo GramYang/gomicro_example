@@ -9,12 +9,15 @@ import (
 	"github.com/micro/go-micro/registry/consul"
 	"github.com/micro/go-micro/util/log"
 	"github.com/micro/go-micro/web"
-	"gomicro_example/part6/basic"
-	"gomicro_example/part6/basic/common"
-	"gomicro_example/part6/basic/config"
-	"gomicro_example/part6/plugins/breaker"
-	_ "gomicro_example/part6/plugins/session"
-	"gomicro_example/part6/user-web/handler"
+	"github.com/opentracing/opentracing-go"
+	"gomicro_example/part7/basic"
+	"gomicro_example/part7/basic/common"
+	"gomicro_example/part7/basic/config"
+	"gomicro_example/part7/plugins/breaker"
+	_ "gomicro_example/part7/plugins/session"
+	tracer "gomicro_example/part7/plugins/tracer/jaeger"
+	"gomicro_example/part7/plugins/tracer/opentracing/std2micro"
+	"gomicro_example/part7/user-web/handler"
 	"net"
 	"net/http"
 	"time"
@@ -35,6 +38,13 @@ func main() {
 
 	// 使用consul注册
 	micReg := consul.NewRegistry(registryOptions)
+
+	t, io, err := tracer.NewTracer(cfg.Name, "")
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer io.Close()
+	opentracing.SetGlobalTracer(t)
 
 	// 创建新服务
 	service := web.NewService(
@@ -57,12 +67,14 @@ func main() {
 		log.Fatal(err)
 	}
 
+	//设置采样率
+	std2micro.SetSamplingFrequency(50)
 	// 注册登录接口
 	handlerLogin := http.HandlerFunc(handler.Login)
-	service.Handle("/user/login", breaker.BreakerWrapper(handlerLogin))
+	service.Handle("/user/login", std2micro.TracerWrapper(breaker.BreakerWrapper(handlerLogin)))
 	// 注册退出接口
-	service.HandleFunc("/user/logout", handler.Logout)
-	service.HandleFunc("/user/test", handler.TestSession)
+	service.Handle("/user/logout", std2micro.TracerWrapper(http.HandlerFunc(handler.Logout)))
+	service.Handle("/user/test", std2micro.TracerWrapper(http.HandlerFunc(handler.TestSession)))
 
 	hystrixStreamHandler := hystrix.NewStreamHandler()
 	hystrixStreamHandler.Start()

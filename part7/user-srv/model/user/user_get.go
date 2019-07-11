@@ -2,8 +2,8 @@ package user
 
 import (
 	"github.com/micro/go-micro/util/log"
-	"gomicro_example/part6/plugins/db"
-	proto "gomicro_example/part6/user-srv/proto/user"
+	"gomicro_example/part7/plugins/db"
+	proto "gomicro_example/part7/user-srv/proto/user"
 )
 
 func (s *service) QueryUserByName(userName string) (ret *proto.User, err error) {

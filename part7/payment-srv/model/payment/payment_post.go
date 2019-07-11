@@ -4,10 +4,10 @@ import (
 	"context"
 	"fmt"
 	"github.com/micro/go-micro/util/log"
-	"gomicro_example/part6/basic/common"
-	invS "gomicro_example/part6/inventory-srv/proto/inventory"
-	ordS "gomicro_example/part6/order-srv/proto/order"
-	"gomicro_example/part6/plugins/db"
+	"gomicro_example/part7/basic/common"
+	invS "gomicro_example/part7/inventory-srv/proto/inventory"
+	ordS "gomicro_example/part7/order-srv/proto/order"
+	"gomicro_example/part7/plugins/db"
 )
 
 // PayOrder 支付订单

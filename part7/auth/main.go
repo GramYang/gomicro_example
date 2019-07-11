@@ -8,13 +8,16 @@ import (
 	"github.com/micro/go-micro/registry"
 	"github.com/micro/go-micro/registry/consul"
 	"github.com/micro/go-micro/util/log"
-	"gomicro_example/part6/auth/handler"
-	"gomicro_example/part6/auth/model"
-	s "gomicro_example/part6/auth/proto/auth"
-	"gomicro_example/part6/basic"
-	"gomicro_example/part6/basic/common"
-	"gomicro_example/part6/basic/config"
-	_ "gomicro_example/part6/plugins/redis"
+	ocplugin "github.com/micro/go-plugins/wrapper/trace/opentracing"
+	"github.com/opentracing/opentracing-go"
+	"gomicro_example/part7/auth/handler"
+	"gomicro_example/part7/auth/model"
+	s "gomicro_example/part7/auth/proto/auth"
+	"gomicro_example/part7/basic"
+	"gomicro_example/part7/basic/common"
+	"gomicro_example/part7/basic/config"
+	_ "gomicro_example/part7/plugins/redis"
+	tracer "gomicro_example/part7/plugins/tracer/jaeger"
 	"time"
 )
 
@@ -34,12 +37,19 @@ func main() {
 	// 使用consul注册
 	micReg := consul.NewRegistry(registryOptions)
 
+	t, io, err := tracer.NewTracer(cfg.Name, "")
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer io.Close()
+	opentracing.SetGlobalTracer(t)
 	// 新建服务
 	service := micro.NewService(
 		micro.Name(cfg.Name),
 		micro.Registry(micReg),
 		micro.Version(cfg.Version),
 		micro.Address(cfg.Addr()),
+		micro.WrapHandler(ocplugin.NewHandlerWrapper()),
 	)
 
 	// 服务初始化

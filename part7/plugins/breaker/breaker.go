@@ -4,7 +4,7 @@ import (
 	"errors"
 	"fmt"
 	"github.com/afex/hystrix-go/hystrix"
-	statusCode "gomicro_example/part6/plugins/breaker/http"
+	statusCode "gomicro_example/part7/plugins/breaker/http"
 	"net/http"
 )
 

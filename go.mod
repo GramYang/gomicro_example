@@ -30,8 +30,11 @@ require (
 	github.com/micro/go-config v1.1.0
 	github.com/micro/go-micro v1.5.0
 	github.com/micro/go-plugins v1.1.0
+	github.com/micro/micro v1.1.1
 	github.com/nats-io/nats-server/v2 v2.0.0 // indirect
+	github.com/opentracing/opentracing-go v1.1.0
 	github.com/prometheus/common v0.4.1
+	github.com/uber/jaeger-client-go v2.16.0+incompatible
 	github.com/ugorji/go/codec v0.0.0-20190320090025-2dc34c0b8780 // indirect
 	go.uber.org/zap v1.9.1
 	google.golang.org/grpc v1.21.1

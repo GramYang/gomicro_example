@@ -8,10 +8,13 @@ import (
 	"github.com/micro/go-micro/registry/consul"
 	"github.com/micro/go-micro/util/log"
 	"github.com/micro/go-micro/web"
-	"gomicro_example/part6/basic"
-	"gomicro_example/part6/basic/common"
-	"gomicro_example/part6/basic/config"
-	"gomicro_example/part6/payment-web/handler"
+	"github.com/opentracing/opentracing-go"
+	"gomicro_example/part7/basic"
+	"gomicro_example/part7/basic/common"
+	"gomicro_example/part7/basic/config"
+	"gomicro_example/part7/payment-web/handler"
+	tracer "gomicro_example/part7/plugins/tracer/jaeger"
+	"gomicro_example/part7/plugins/tracer/opentracing/std2micro"
 	"net/http"
 	"time"
 )
@@ -32,6 +35,12 @@ func main() {
 	// 使用consul注册
 	micReg := consul.NewRegistry(registryOptions)
 
+	t, io, err := tracer.NewTracer(cfg.Name, "")
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer io.Close()
+	opentracing.SetGlobalTracer(t)
 	// 创建新服务
 	service := web.NewService(
 		web.Name(cfg.Name),
@@ -53,9 +62,11 @@ func main() {
 		log.Fatal(err)
 	}
 
+	//设置采样率
+	std2micro.SetSamplingFrequency(50)
 	// 新建订单接口
 	authHandler := http.HandlerFunc(handler.PayOrder)
-	service.Handle("/payment/pay-order", handler.AuthWrapper(authHandler))
+	service.Handle("/payment/pay-order", std2micro.TracerWrapper(handler.AuthWrapper(authHandler)))
 
 	// 运行服务
 	if err := service.Run(); err != nil {

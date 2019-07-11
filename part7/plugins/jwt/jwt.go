@@ -1,6 +1,6 @@
 package jwt
 
-import "gomicro_example/part6/basic"
+import "gomicro_example/part7/basic"
 
 // Jwt 配置 接口
 type Jwt struct {

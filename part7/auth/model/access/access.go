@@ -4,9 +4,9 @@ import (
 	"fmt"
 	r "github.com/go-redis/redis"
 	"github.com/micro/go-micro/util/log"
-	"gomicro_example/part6/basic/config"
-	"gomicro_example/part6/plugins/jwt"
-	"gomicro_example/part6/plugins/redis"
+	"gomicro_example/part7/basic/config"
+	"gomicro_example/part7/plugins/jwt"
+	"gomicro_example/part7/plugins/redis"
 	"sync"
 )
 

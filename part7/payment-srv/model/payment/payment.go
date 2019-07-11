@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"github.com/micro/go-micro"
 	"github.com/micro/go-micro/client"
-	"gomicro_example/part6/basic/common"
-	invS "gomicro_example/part6/inventory-srv/proto/inventory"
-	ordS "gomicro_example/part6/order-srv/proto/order"
+	"gomicro_example/part7/basic/common"
+	invS "gomicro_example/part7/inventory-srv/proto/inventory"
+	ordS "gomicro_example/part7/order-srv/proto/order"
 	"sync"
 )
 

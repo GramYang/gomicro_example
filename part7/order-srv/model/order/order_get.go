@@ -2,8 +2,8 @@ package order
 
 import (
 	"github.com/micro/go-micro/util/log"
-	proto "gomicro_example/part6/order-srv/proto/order"
-	"gomicro_example/part6/plugins/db"
+	proto "gomicro_example/part7/order-srv/proto/order"
+	"gomicro_example/part7/plugins/db"
 )
 
 // GetOrder 获取订单

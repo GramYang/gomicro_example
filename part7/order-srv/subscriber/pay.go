@@ -3,8 +3,8 @@ package subscriber
 import (
 	"context"
 	"github.com/micro/go-micro/util/log"
-	"gomicro_example/part6/order-srv/model/order"
-	payS "gomicro_example/part6/payment-srv/proto/payment"
+	"gomicro_example/part7/order-srv/model/order"
+	payS "gomicro_example/part7/payment-srv/proto/payment"
 )
 
 var (

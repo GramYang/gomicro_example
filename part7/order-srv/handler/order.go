@@ -3,8 +3,8 @@ package handler
 import (
 	"context"
 	"github.com/micro/go-micro/util/log"
-	"gomicro_example/part6/order-srv/model/order"
-	proto "gomicro_example/part6/order-srv/proto/order"
+	"gomicro_example/part7/order-srv/model/order"
+	proto "gomicro_example/part7/order-srv/proto/order"
 )
 
 var (

@@ -1,7 +1,7 @@
 package basic
 
 import (
-	"gomicro_example/part6/basic/config"
+	"gomicro_example/part7/basic/config"
 )
 
 var (

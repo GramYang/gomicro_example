@@ -3,8 +3,8 @@ package order
 import (
 	"fmt"
 	"github.com/micro/go-micro/client"
-	invS "gomicro_example/part6/inventory-srv/proto/inventory"
-	proto "gomicro_example/part6/order-srv/proto/order"
+	invS "gomicro_example/part7/inventory-srv/proto/inventory"
+	proto "gomicro_example/part7/order-srv/proto/order"
 	"sync"
 )
 

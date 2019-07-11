@@ -3,9 +3,9 @@ package handler
 import (
 	"context"
 	"github.com/micro/go-micro/util/log"
-	auth "gomicro_example/part6/auth/proto/auth"
-	"gomicro_example/part6/basic/common"
-	"gomicro_example/part6/plugins/session"
+	auth "gomicro_example/part7/auth/proto/auth"
+	"gomicro_example/part7/basic/common"
+	"gomicro_example/part7/plugins/session"
 	"net/http"
 )
 
